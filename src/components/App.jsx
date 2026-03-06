@@ -3,6 +3,7 @@ import Dashboard from "./Dashboard/Dashboard"; // Nueva importación
 import Header from "./Header/Header";
 import Reviews from "./Reviews/Reviews";
 import AboutMe from "./AboutMe/AboutMe";
+import AboutUs from "./AboutUs/AboutUs";
 import "./App.css";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Dashboard />} />
         <Route path="/reviews" element={<Reviews />} />
         <Route path="/about-me" element={<AboutMe />} />
+        <Route path="/about-us" element={<AboutUs />} />
       </Routes>
     </div>
   );
