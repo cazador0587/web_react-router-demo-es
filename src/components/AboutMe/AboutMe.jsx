@@ -1,11 +1,13 @@
 // AboutMe.jsx
 
+import { Outlet, Link } from "react-router-dom";
 import "./AboutMe.css"; // Nueva importación
-import { Link } from "react-router-dom"; // Nueva importación
+//import { Link } from "react-router-dom"; // Nueva importación
 
 function AboutMe() {
   // Agrega los nombres de clase que se muestran a continuación para que se apliquen los estilos.
   // Agrega los enlaces como se muestra a continuación.
+  // Agrega un Outlet como se muestra a continuación. Fácil, ¿verdad?
   return (
     <div className="about">
       <ul className="links">
@@ -20,6 +22,7 @@ function AboutMe() {
         </li>
       </ul>
       <p>Soy una persona sencilla. Veo Emojis, escribo reseñas.</p>
+      <Outlet />
     </div>
   );
 }
