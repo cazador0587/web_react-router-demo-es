@@ -1,6 +1,7 @@
 // Reviews.jsx
 
 import "./Reviews.css";
+import { Link } from "react-router-dom";
 
 function Reviews({ reviews }) {
   return (
@@ -10,7 +11,7 @@ function Reviews({ reviews }) {
           reviews && reviews.map((review) => {
             return (
               <li key={review.id} className="reviews__item">
-                {review.title}
+                <Link to={`${review.id}`}>{review.title}</Link>
               </li>
             );
           })}

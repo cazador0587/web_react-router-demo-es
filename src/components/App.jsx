@@ -32,7 +32,7 @@ function App() {
     // Un array de dependencia vacío significa que el hook sólo se ejecuta cuando
     // se carga el componente.
   }, []);
-  
+
   return (
     <div className="App">
       <Header />
@@ -50,6 +50,10 @@ function App() {
           <Route path="sitehistory" element={<SiteHistory />} />
           <Route path="sitemission" element={<SiteMission />} />
         </Route>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/reviews" element={<Reviews reviews={reviews} />} />
+        <Route path="/reviews/:reviewId" element={<Reviews reviews={reviews} />}
+        />
       </Routes>
     </div>
   );
