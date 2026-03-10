@@ -1,7 +1,20 @@
-function Reviews() {
+// Reviews.jsx
+
+import "./Reviews.css";
+
+function Reviews({ reviews }) {
   return (
-    <div>
-      <p>¡Aquí irán mis reseñas!</p>
+    <div className="reviews">
+      <ul className="reviews__list">
+        {
+          reviews && reviews.map((review) => {
+            return (
+              <li key={review.id} className="reviews__item">
+                {review.title}
+              </li>
+            );
+          })}
+      </ul>
     </div>
   );
 }
